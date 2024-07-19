@@ -16,9 +16,9 @@
         <sys_id>4b6b18c7753e8e105dcfb1c0bc5010aa</sys_id>
         <sys_mod_count>3</sys_mod_count>
         <sys_name>Impersonate</sys_name>
-        <sys_package display_value="Dynamic Reference Qualifier SM.now WORK IN PROGRESS" source="x_dtitg_dyn_ref">d49c834144308a185dcf3c103cd402e7</sys_package>
+        <sys_package display_value="Dynamic Reference Qualifier SM.now" source="x_dtitg_dyn_ref">d49c834144308a185dcf3c103cd402e7</sys_package>
         <sys_policy/>
-        <sys_scope display_value="Dynamic Reference Qualifier SM.now WORK IN PROGRESS">d49c834144308a185dcf3c103cd402e7</sys_scope>
+        <sys_scope display_value="Dynamic Reference Qualifier SM.now">d49c834144308a185dcf3c103cd402e7</sys_scope>
         <sys_update_name>sys_atf_step_4b6b18c7753e8e105dcfb1c0bc5010aa</sys_update_name>
         <sys_updated_by>admin_adeshpande</sys_updated_by>
         <sys_updated_on>2024-06-19 07:04:50</sys_updated_on>

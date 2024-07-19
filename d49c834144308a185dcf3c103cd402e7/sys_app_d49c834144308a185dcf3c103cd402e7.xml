@@ -15,7 +15,7 @@
         <license_model>none</license_model>
         <logo/>
         <menu/>
-        <name>Dynamic Reference Qualifier SM.now WORK IN PROGRESS</name>
+        <name>Dynamic Reference Qualifier SM.now</name>
         <package_json/>
         <private>false</private>
         <restrict_table_access>false</restrict_table_access>
@@ -32,9 +32,9 @@
         <sys_created_by>admin_adeshpande</sys_created_by>
         <sys_created_on>2024-03-06 04:42:27</sys_created_on>
         <sys_id>d49c834144308a185dcf3c103cd402e7</sys_id>
-        <sys_mod_count>4</sys_mod_count>
-        <sys_updated_by>admin_adeshpande</sys_updated_by>
-        <sys_updated_on>2024-04-11 09:53:42</sys_updated_on>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-07-19 11:06:35</sys_updated_on>
         <template/>
         <trackable>true</trackable>
         <uninstall_blocked>false</uninstall_blocked>
@@ -42,10 +42,6 @@
         <vendor/>
         <vendor_prefix/>
         <version>1.2.0</version>
-        <x_snc_devtools_documentation_url>https://wiki.telekom.de/x/6rLyWw</x_snc_devtools_documentation_url>
-        <x_snc_devtools_maintainer>The Octophants / Incident Management Team</x_snc_devtools_maintainer>
-        <x_snc_devtools_maintainer_email>TheOctophants@mg.telekom.de</x_snc_devtools_maintainer_email>
-        <x_snc_devtools_repo_url>https://gitlab.devops.telekom.de/sm.now/dynamic-reference-qualifier-sm.now.git</x_snc_devtools_repo_url>
     </sys_app>
     <sys_translated_text action="delete_multiple" query="documentkey=d49c834144308a185dcf3c103cd402e7"/>
 </record_update>

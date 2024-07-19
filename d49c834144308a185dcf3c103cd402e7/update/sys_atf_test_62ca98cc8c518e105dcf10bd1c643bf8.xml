@@ -15,9 +15,9 @@
         <sys_id>62ca98cc8c518e105dcf10bd1c643bf8</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_name>Dynamic Reference Qualifier SM.now - ReferenceQualifierFactory - getReferenceQualifier()</sys_name>
-        <sys_package display_value="Dynamic Reference Qualifier SM.now WORK IN PROGRESS" source="x_dtitg_dyn_ref">d49c834144308a185dcf3c103cd402e7</sys_package>
+        <sys_package display_value="Dynamic Reference Qualifier SM.now" source="x_dtitg_dyn_ref">d49c834144308a185dcf3c103cd402e7</sys_package>
         <sys_policy/>
-        <sys_scope display_value="Dynamic Reference Qualifier SM.now WORK IN PROGRESS">d49c834144308a185dcf3c103cd402e7</sys_scope>
+        <sys_scope display_value="Dynamic Reference Qualifier SM.now">d49c834144308a185dcf3c103cd402e7</sys_scope>
         <sys_update_name>sys_atf_test_62ca98cc8c518e105dcf10bd1c643bf8</sys_update_name>
         <sys_updated_by>admin_adeshpande</sys_updated_by>
         <sys_updated_on>2024-03-27 09:44:17</sys_updated_on>

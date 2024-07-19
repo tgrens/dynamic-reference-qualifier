@@ -8,9 +8,9 @@
         <sys_id>21a500088c118e105dcf10bd1c643b80</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_name>141023338c4d4e105dcf10bd1c643b6a</sys_name>
-        <sys_package display_value="Dynamic Reference Qualifier SM.now WORK IN PROGRESS" source="x_dtitg_dyn_ref">d49c834144308a185dcf3c103cd402e7</sys_package>
+        <sys_package display_value="Dynamic Reference Qualifier SM.now" source="x_dtitg_dyn_ref">d49c834144308a185dcf3c103cd402e7</sys_package>
         <sys_policy/>
-        <sys_scope display_value="Dynamic Reference Qualifier SM.now WORK IN PROGRESS">d49c834144308a185dcf3c103cd402e7</sys_scope>
+        <sys_scope display_value="Dynamic Reference Qualifier SM.now">d49c834144308a185dcf3c103cd402e7</sys_scope>
         <sys_update_name>sys_atf_test_suite_test_21a500088c118e105dcf10bd1c643b80</sys_update_name>
         <sys_updated_by>admin_adeshpande</sys_updated_by>
         <sys_updated_on>2024-03-27 08:11:03</sys_updated_on>

@@ -123,9 +123,9 @@ class ReferenceQualifier {
         <sys_id>927587998c0942105dcf10bd1c643b1a</sys_id>
         <sys_mod_count>49</sys_mod_count>
         <sys_name>ReferenceQualifier</sys_name>
-        <sys_package display_value="Dynamic Reference Qualifier SM.now WORK IN PROGRESS" source="x_dtitg_dyn_ref">d49c834144308a185dcf3c103cd402e7</sys_package>
+        <sys_package display_value="Dynamic Reference Qualifier SM.now" source="x_dtitg_dyn_ref">d49c834144308a185dcf3c103cd402e7</sys_package>
         <sys_policy>read</sys_policy>
-        <sys_scope display_value="Dynamic Reference Qualifier SM.now WORK IN PROGRESS">d49c834144308a185dcf3c103cd402e7</sys_scope>
+        <sys_scope display_value="Dynamic Reference Qualifier SM.now">d49c834144308a185dcf3c103cd402e7</sys_scope>
         <sys_update_name>sys_script_include_927587998c0942105dcf10bd1c643b1a</sys_update_name>
         <sys_updated_by>admin_adeshpande</sys_updated_by>
         <sys_updated_on>2024-06-21 08:21:28</sys_updated_on>

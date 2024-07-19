@@ -59,9 +59,9 @@ class ConfigurableRefQualifier extends ReferenceQualifier {
         <sys_id>544761b92ddf06105dcf91c2a78bf187</sys_id>
         <sys_mod_count>13</sys_mod_count>
         <sys_name>ConfigurableRefQualifier</sys_name>
-        <sys_package display_value="Dynamic Reference Qualifier SM.now WORK IN PROGRESS" source="x_dtitg_dyn_ref">d49c834144308a185dcf3c103cd402e7</sys_package>
+        <sys_package display_value="Dynamic Reference Qualifier SM.now" source="x_dtitg_dyn_ref">d49c834144308a185dcf3c103cd402e7</sys_package>
         <sys_policy>read</sys_policy>
-        <sys_scope display_value="Dynamic Reference Qualifier SM.now WORK IN PROGRESS">d49c834144308a185dcf3c103cd402e7</sys_scope>
+        <sys_scope display_value="Dynamic Reference Qualifier SM.now">d49c834144308a185dcf3c103cd402e7</sys_scope>
         <sys_update_name>sys_script_include_544761b92ddf06105dcf91c2a78bf187</sys_update_name>
         <sys_updated_by>admin_thomas</sys_updated_by>
         <sys_updated_on>2024-07-12 11:38:24</sys_updated_on>
