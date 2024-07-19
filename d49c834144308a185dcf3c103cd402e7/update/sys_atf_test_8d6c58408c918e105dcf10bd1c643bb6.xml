@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_atf_test">
+    <sys_atf_test action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <copied_from/>
+        <description/>
+        <enable_parameterized_testing>false</enable_parameterized_testing>
+        <fail_on_server_error>true</fail_on_server_error>
+        <name>Dynamic Reference Qualifier SM.now - ReferenceQualifierFactory - getProducerReferenceQualifier()</name>
+        <parameters/>
+        <remember/>
+        <sn_atf_tg_generated>false</sn_atf_tg_generated>
+        <sys_class_name>sys_atf_test</sys_class_name>
+        <sys_created_by>admin_adeshpande</sys_created_by>
+        <sys_created_on>2024-03-27 09:50:12</sys_created_on>
+        <sys_id>8d6c58408c918e105dcf10bd1c643bb6</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>Dynamic Reference Qualifier SM.now - ReferenceQualifierFactory - getProducerReferenceQualifier()</sys_name>
+        <sys_package display_value="Dynamic Reference Qualifier SM.now WORK IN PROGRESS" source="x_dtitg_dyn_ref">d49c834144308a185dcf3c103cd402e7</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Dynamic Reference Qualifier SM.now WORK IN PROGRESS">d49c834144308a185dcf3c103cd402e7</sys_scope>
+        <sys_update_name>sys_atf_test_8d6c58408c918e105dcf10bd1c643bb6</sys_update_name>
+        <sys_updated_by>admin_adeshpande</sys_updated_by>
+        <sys_updated_on>2024-04-11 09:54:23</sys_updated_on>
+    </sys_atf_test>
+    <sys_variable_value action="delete_multiple" query="document_key=8d6c58408c918e105dcf10bd1c643bb6"/>
+</record_update>

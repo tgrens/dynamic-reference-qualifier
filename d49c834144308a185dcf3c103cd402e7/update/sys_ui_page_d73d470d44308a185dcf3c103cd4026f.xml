@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_page">
+    <sys_ui_page action="INSERT_OR_UPDATE">
+        <category>general</category>
+        <client_script/>
+        <description/>
+        <direct>false</direct>
+        <endpoint>x_dtitg_dyn_ref_manual.do</endpoint>
+        <html><![CDATA[<?xml version="1.0" encoding="utf-8" ?>
+<j:jelly trim="false" xmlns:j="jelly:core" xmlns:g="glide" xmlns:j2="null" xmlns:g2="null">
+<div style="padding-left: 20px;">
+<span style="visibility: hidden;">_CUT_HERE_</span>
+	<g2:no_escape>$[
+		var docapi = new x_snc_devtools.DocumentationAPI('d49c834144308a185dcf3c103cd402e7');
+		docapi.RenderHeader();
+	]</g2:no_escape>
+	
+	<h2>Overview</h2> 
+	<g2:no_escape>$[
+		docapi.RenderDescription();
+	]</g2:no_escape>	
+	
+	<!--
+	<h2>Features</h2> 
+	<p>The Core SM.now application contains re-usable components to be used by all business applications:</p>
+	<ul>
+		<li>Extensions to process independend ootb tables</li>
+		<li>Additional, process-independend tables</li>
+		<li>Reuseable scripts</li>
+		<li>Roles representing personas</li>
+		<li>Platform-wide settings</li>
+	</ul>
+-->
+	
+	<h2>System Requirements</h2>
+	<ul>
+		<g2:no_escape>$[
+			docapi.RenderSystemRequirements(
+				'San Diego,Tokyo',
+				true,
+				AppGetDependencies());
+		]</g2:no_escape>	
+	</ul>
+	
+	<!--
+	<h2>Installation</h2>
+	<ol>
+		<g2:no_escape>$[
+			docapi.RenderInstallationInstructionsImportFromSourceControl(
+				'DevTools',
+				'https://github.com/saschawildgrube/servicenow-devtools',
+				true,
+				'https://www.wildgrube.com/servicenow-devtools/');
+		]</g2:no_escape>
+		<g2:no_escape>$[
+			docapi.RenderInstallationInstructionsImportFromSourceControl(
+				'TODO: Add app name and repo url here',
+				'https://github.com/githubusername/reponame');
+		]</g2:no_escape>		
+		<g2:no_escape>$[
+			docapi.RenderInstallationInstructionsAppInstall();
+		]</g2:no_escape>		
+		<li>TODO: Add further steps required for installation...</li>
+	</ol>
+	-->
+	<h2>Reference</h2>
+
+	<h3>Configuration Options</h3>
+	<g2:no_escape>$[docapi.RenderProperties()]</g2:no_escape>
+	
+	<h3>Roles</h3>
+	<g2:no_escape>$[docapi.RenderRoles()]</g2:no_escape>		
+
+	<!--
+	<h3>UI Actions</h3>
+	<g2:no_escape>$[docapi.RenderUIActions()]</g2:no_escape>		
+	
+	<h3>Script Includes</h3>
+	<g2:no_escape>$[docapi.RenderScriptIncludes()]</g2:no_escape>
+	
+	<h3>UI Scripts</h3>
+	<g2:no_escape>$[docapi.RenderUIScripts()]</g2:no_escape>	
+	
+	<h3>REST APIs</h3>
+	<g2:no_escape>$[docapi.RenderRestApis()]</g2:no_escape>		
+	
+	<h3>Test step configurations</h3>
+	<g2:no_escape>$[docapi.RenderTestStepConfigurations()]</g2:no_escape>
+	
+	<h3>Extension Points</h3>
+	<g2:no_escape>$[docapi.RenderExtensionPoints()]</g2:no_escape>		
+
+	<h3>Business Rules</h3>
+	<g2:no_escape>$[docapi.RenderBusinessRules()]</g2:no_escape>	
+	
+	<h2>License</h2>
+	<g2:no_escape>$[docapi.RenderCopyright(2023,'TODO: Add name of copyright holder')]</g2:no_escape>
+	<g2:no_escape>$[docapi.RenderLicense()]</g2:no_escape>
+-->
+ 
+	<h2>Release Notes</h2>
+
+	<h3>1.2.0 - TODO</h3>
+	<ol>
+		<li>SMNOW-1575: Dynamic Reference qualifier for CI's</li>
+	</ol>
+
+
+	<h3>1.1.0 - 2024-06-21</h3>
+	<ol>
+		<li>[SMNOW-1703] Refactoring Dynamic Reference Qualifiers</li>
+		<li>[SMNOW-1702] Reference qualifiers based on groups</li>
+	</ol>
+
+	<h3>1.0.0 - 2024-04-11</h3>
+	<ol>
+		<li>Dynamic reference qualifier initial version</li>
+	</ol>
+	
+
+<span style="visibility: hidden;">_CUT_HERE_</span>
+</div>
+</j:jelly>]]></html>
+        <name>manual</name>
+        <processing_script/>
+        <sys_class_name>sys_ui_page</sys_class_name>
+        <sys_created_by>admin_adeshpande</sys_created_by>
+        <sys_created_on>2024-03-06 04:47:20</sys_created_on>
+        <sys_id>d73d470d44308a185dcf3c103cd4026f</sys_id>
+        <sys_mod_count>7</sys_mod_count>
+        <sys_name>manual</sys_name>
+        <sys_package display_value="Dynamic Reference Qualifier SM.now WORK IN PROGRESS" source="x_dtitg_dyn_ref">d49c834144308a185dcf3c103cd402e7</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Dynamic Reference Qualifier SM.now WORK IN PROGRESS">d49c834144308a185dcf3c103cd402e7</sys_scope>
+        <sys_update_name>sys_ui_page_d73d470d44308a185dcf3c103cd4026f</sys_update_name>
+        <sys_updated_by>admin_thomas</sys_updated_by>
+        <sys_updated_on>2024-07-10 16:35:16</sys_updated_on>
+    </sys_ui_page>
+</record_update>

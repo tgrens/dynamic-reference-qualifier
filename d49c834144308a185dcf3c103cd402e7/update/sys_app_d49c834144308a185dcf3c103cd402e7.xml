@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_app">
+    <sys_app action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <can_edit_in_studio>true</can_edit_in_studio>
+        <enforce_license>log</enforce_license>
+        <guided_setup_guid/>
+        <hide_on_ui>false</hide_on_ui>
+        <ide_created>DS</ide_created>
+        <installed_as_dependency>false</installed_as_dependency>
+        <js_level>es_latest</js_level>
+        <licensable>true</licensable>
+        <license/>
+        <license_category>none</license_category>
+        <license_definition/>
+        <license_model>none</license_model>
+        <logo/>
+        <menu/>
+        <name>Dynamic Reference Qualifier SM.now WORK IN PROGRESS</name>
+        <package_json/>
+        <private>false</private>
+        <restrict_table_access>false</restrict_table_access>
+        <runtime_access_tracking>permissive</runtime_access_tracking>
+        <scope>x_dtitg_dyn_ref</scope>
+        <scoped_administration>false</scoped_administration>
+        <short_description>Dynamic reference qualifiers to handle complicated conditions easily</short_description>
+        <source>x_dtitg_dyn_ref</source>
+        <store_correlation_id/>
+        <store_url/>
+        <subscription_entitlement/>
+        <sys_class_name>sys_app</sys_class_name>
+        <sys_code/>
+        <sys_created_by>admin_adeshpande</sys_created_by>
+        <sys_created_on>2024-03-06 04:42:27</sys_created_on>
+        <sys_id>d49c834144308a185dcf3c103cd402e7</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_updated_by>admin_adeshpande</sys_updated_by>
+        <sys_updated_on>2024-04-11 09:53:42</sys_updated_on>
+        <template/>
+        <trackable>true</trackable>
+        <uninstall_blocked>false</uninstall_blocked>
+        <user_role/>
+        <vendor/>
+        <vendor_prefix/>
+        <version>1.2.0</version>
+        <x_snc_devtools_documentation_url>https://wiki.telekom.de/x/6rLyWw</x_snc_devtools_documentation_url>
+        <x_snc_devtools_maintainer>The Octophants / Incident Management Team</x_snc_devtools_maintainer>
+        <x_snc_devtools_maintainer_email>TheOctophants@mg.telekom.de</x_snc_devtools_maintainer_email>
+        <x_snc_devtools_repo_url>https://gitlab.devops.telekom.de/sm.now/dynamic-reference-qualifier-sm.now.git</x_snc_devtools_repo_url>
+    </sys_app>
+    <sys_translated_text action="delete_multiple" query="documentkey=d49c834144308a185dcf3c103cd402e7"/>
+</record_update>

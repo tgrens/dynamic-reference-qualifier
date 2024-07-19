@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_dtitg_dyn_ref.Constants</api_name>
+        <caller_access/>
+        <client_callable>false</client_callable>
+        <description>Script include to store constants</description>
+        <name>Constants</name>
+        <script><![CDATA[/* eslint-disable linebreak-style */
+/* eslint-disable no-unused-vars */
+/* eslint-disable no-undef */
+/**
+ * @description Script include to store constants
+ * @since 21/03/2024
+ * @date  21/03/2024
+ * @version 1.0.0
+ * @author Apurv Deshpande E-Mail: <Apurv.Deshpande@t-systems.com>
+ *
+ */
+const Constants = {
+
+    NOW_PROPERTIES: 'x_dtitg_now_proper_now_properties',
+    PROPERTY_TYPE_REF_QUAL: '1000',
+    PROPERTY_TYPE_CLIENT_REF_QUAL: '1100',
+    ROLES: 'sys_user_role',
+	USER_HAS_ROLE: 'sys_user_has_role',
+    DEFAULT_PROPERTY: 'value'
+
+};
+]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin_adeshpande</sys_created_by>
+        <sys_created_on>2024-03-21 07:14:00</sys_created_on>
+        <sys_id>d20fb84ef80146105dcfbd805aab8af5</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_name>Constants</sys_name>
+        <sys_package display_value="Dynamic Reference Qualifier SM.now WORK IN PROGRESS" source="x_dtitg_dyn_ref">d49c834144308a185dcf3c103cd402e7</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Dynamic Reference Qualifier SM.now WORK IN PROGRESS">d49c834144308a185dcf3c103cd402e7</sys_scope>
+        <sys_update_name>sys_script_include_d20fb84ef80146105dcfbd805aab8af5</sys_update_name>
+        <sys_updated_by>admin_thomas</sys_updated_by>
+        <sys_updated_on>2024-07-11 06:18:33</sys_updated_on>
+    </sys_script_include>
+</record_update>

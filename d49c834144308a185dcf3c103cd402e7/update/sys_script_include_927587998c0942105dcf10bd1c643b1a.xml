@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_dtitg_dyn_ref.ReferenceQualifier</api_name>
+        <caller_access/>
+        <client_callable>false</client_callable>
+        <description>Base class for reference qualifier implementation</description>
+        <name>ReferenceQualifier</name>
+        <script><![CDATA[/* eslint-disable linebreak-style */
+/* eslint-disable no-undef */
+/* eslint-disable no-unused-vars */
+/**
+ * @class ReferenceQualifier
+ * @description Base class for dynamic reference qualifier implementation
+ * @since 19/03/2024
+ * @date  19/03/2024
+ * @version 1.0.0
+ * @author Apurv Deshpande E-Mail: <apurv.deshpande@t-systems.com>; Thomas Grensemann E-Mail: <thomas.grensemann@t-systems.com>
+ *
+ */
+class ReferenceQualifier {
+
+    /**
+     * @description Returns the reference qualifier string
+     *
+     * @param {String} field name of the field
+     * @param {Object} current GlideRecord object of current record
+     * @param {String} user SysID of current user
+     *
+     */
+    process() {
+        throw new Error('Abstract method!');
+    }
+
+    /**
+     * @description Calculates the property name from the given parameters.
+     *
+     * @returns {String} propertyName
+     */
+    buildProperty() {
+        let builder = new x_dtitg_core_smnow.StringBuilder();
+        let first = UtilityFunctions.first(arguments);
+        // eslint-disable-next-line guard-for-in
+        for (let key in arguments) {
+            let arg = arguments[key];
+            if(UtilityFunctions.isNotBlank(arg)) {
+                if (arg !== first) {
+                    builder.append('.');
+                }
+                builder.append(arg);
+            }
+        }
+        return builder.toString();
+    }
+
+    /**
+     * @description Returns the persona role of the current user
+     *
+     * @param {String} user SysID of current user
+     * @param {String} table name of the table
+     *
+     * @returns {String} role
+     */
+    getRoles(user) {
+        let roles = [];
+        let userHasRole = new GlideRecord(Constants.USER_HAS_ROLE);
+        // eslint-disable-next-line camelcase
+        const query = x_dtitg_dyn_ref.QueryBuilder.findRoles(user);
+        gs.debug(`[DynamicReferenceQualifier][getRoles] query => ${ query}`);
+        userHasRole.addEncodedQuery(query);
+        userHasRole.query();
+        while(userHasRole.next()) {
+            roles.push(userHasRole.getValue('role'));
+        }
+		gs.debug(`[DynamicReferenceQualifier][getRoles] roles => ${ roles}`);
+        return roles;
+    }
+
+    /**
+     * @description Executes the script in property and returns the result
+     *
+     * @param {Object} property GlideRecord object of property
+     * @param {Object} current GlideRecord object of current record
+     * @param {Boolean} currentFlag flag if current object is available or not
+     *
+     * @returns {String} query to be used as a reference qualifier
+     */
+    execute(property, current, currentFlag) {
+        let result = '';
+        let evaluator = new GlideScopedEvaluator();
+        evaluator.putVariable('answer', null);
+        evaluator.putVariable('current', currentFlag ? current : null);
+        evaluator.putVariable('previous', null);
+        evaluator.evaluateScript(property, 'souce_script', null);
+        result = evaluator.getVariable('answer');
+        if(UtilityFunctions.isBlank(result)) {
+            gs.error('[DynamicReferenceQualifier][execute] Script result invalid');
+        }
+        return String(result);
+    }
+
+	/**
+     * @description Function that retrieves property.
+     *
+     * @param {String} name property name
+     * @param {String} role sysID of the role
+     * @param {Boolean} client flag for client producer
+     *
+     * @returns {Object} property object
+     */
+    getProperty(name, roles, client) {
+		var configReader = new x_dtitg_now_proper.ConfigReader();
+        return configReader.getReferenceQualifier(name, roles, client);
+    }
+
+
+}
+]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin_adeshpande</sys_created_by>
+        <sys_created_on>2024-03-19 09:06:29</sys_created_on>
+        <sys_id>927587998c0942105dcf10bd1c643b1a</sys_id>
+        <sys_mod_count>49</sys_mod_count>
+        <sys_name>ReferenceQualifier</sys_name>
+        <sys_package display_value="Dynamic Reference Qualifier SM.now WORK IN PROGRESS" source="x_dtitg_dyn_ref">d49c834144308a185dcf3c103cd402e7</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Dynamic Reference Qualifier SM.now WORK IN PROGRESS">d49c834144308a185dcf3c103cd402e7</sys_scope>
+        <sys_update_name>sys_script_include_927587998c0942105dcf10bd1c643b1a</sys_update_name>
+        <sys_updated_by>admin_adeshpande</sys_updated_by>
+        <sys_updated_on>2024-06-21 08:21:28</sys_updated_on>
+    </sys_script_include>
+</record_update>

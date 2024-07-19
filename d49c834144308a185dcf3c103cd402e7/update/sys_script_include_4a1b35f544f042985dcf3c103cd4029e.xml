@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_dtitg_dyn_ref.DynamicReferenceQualifier</api_name>
+        <caller_access/>
+        <client_callable>false</client_callable>
+        <description>Dynamic Reference Qualifier implementation</description>
+        <name>DynamicReferenceQualifier</name>
+        <script><![CDATA[/* eslint-disable linebreak-style */
+/* eslint-disable no-undef */
+/* eslint-disable no-unused-vars */
+/**
+ * @class DynamicReferenceQualifier
+ * @description Dynamic reference qualifier implementation
+ * @since 18/03/2024
+ * @date  18/03/2024
+ * @version 1.0.0
+ * @author Apurv Deshpande E-Mail: <apurv.deshpande@t-systems.com>; Thomas Grensemann E-Mail: <thomas.grensemann@t-systems.com>
+ *
+ */
+class DynamicReferenceQualifier extends ReferenceQualifier {
+
+    /**
+     * @description Returns the reference qualifier string
+     *
+     * @param {String} field name of the field
+     * @param {Object} current GlideRecord object of current record
+     * @param {String} user SysID of current user
+     *
+     * @returns {String} query to be used as a reference qualifier
+     */
+    process(field, current, user) {
+        const EMTPY = 0;
+        let result = '';
+        const table = current.getValue('sys_class_name');
+        const roles = this.getRoles(user);
+        const propertyName = this.buildProperty(field, table);
+        // eslint-disable-next-line camelcase
+        let property = this.getProperty(propertyName, roles, false);
+		gs.debug(`[DynamicReferenceQualifier][process] property ${ property.name}`);
+        // eslint-disable-next-line camelcase
+        if(Object.keys(property).length !== EMTPY) {
+            const scriptedRefQualifier = Boolean(property.use_source_script);
+            // If use script is checked, execute script else check condition field
+            if(scriptedRefQualifier) {
+                result = this.execute(property, current, true);
+            } else {
+                result = property.conditions.toString();
+            }
+        } else {
+            //gs.error(`[DynamicReferenceQualifier][process] Property ${ propertyName} not found - 
+            //Please check if record exists and is valid`);
+        }
+        return result;
+    }
+}
+]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin_adeshpande</sys_created_by>
+        <sys_created_on>2024-03-08 06:42:50</sys_created_on>
+        <sys_id>4a1b35f544f042985dcf3c103cd4029e</sys_id>
+        <sys_mod_count>85</sys_mod_count>
+        <sys_name>DynamicReferenceQualifier</sys_name>
+        <sys_package display_value="Dynamic Reference Qualifier SM.now WORK IN PROGRESS" source="x_dtitg_dyn_ref">d49c834144308a185dcf3c103cd402e7</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Dynamic Reference Qualifier SM.now WORK IN PROGRESS">d49c834144308a185dcf3c103cd402e7</sys_scope>
+        <sys_update_name>sys_script_include_4a1b35f544f042985dcf3c103cd4029e</sys_update_name>
+        <sys_updated_by>admin_adeshpande</sys_updated_by>
+        <sys_updated_on>2024-06-18 09:51:20</sys_updated_on>
+    </sys_script_include>
+</record_update>

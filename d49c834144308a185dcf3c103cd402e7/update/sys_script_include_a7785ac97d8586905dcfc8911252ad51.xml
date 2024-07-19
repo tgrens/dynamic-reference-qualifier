@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_dtitg_dyn_ref.UtilityFunctions</api_name>
+        <caller_access/>
+        <client_callable>false</client_callable>
+        <description>Provides a set of helper functions.</description>
+        <name>UtilityFunctions</name>
+        <script><![CDATA[/* eslint-disable no-undef */
+/* eslint-disable no-unused-vars */
+/**
+ * @class UtilityFunctions
+ * @description Provides a set of helper functions.
+ * @since 09/06/2023
+ * @date  09/06/2023
+ * @version 1.0.0
+ * @author Thomas Grensemann E-Mail: <thomas.grensemann@t-systems.com>
+ *
+ */
+class UtilityFunctions {
+
+    /**
+     * Returns true if the given item is null, undefined, or evaluates to the empty string.
+     *
+     * @param {String} value the string to be checked
+     * @returns {Boolean} false, if string is not null or not empty
+     */
+    static isBlank(value) {
+        return !value || !value.trim();
+    }
+
+    /**
+     * Returns true if the given item exists and is not empty
+     *
+     * @param   {String} value the string to be checked
+     *  @returns {Boolean} true, if string is null or not empty
+     */
+    static isNotBlank(value) {
+        return !UtilityFunctions.isBlank(value);
+    }
+
+    /**
+         * Method to find a value in an Object
+         *
+         * @param {Object} object javascript object
+         * @param {String} property property name
+         *
+         * @returns {Object} the value of the given object property
+         */
+    static findValue(object, property) {
+        let value = '';
+        // eslint-disable-next-line func-names, consistent-return, prefer-arrow-callback, space-before-function-paren
+        Object.keys(object).some(function (prop) {
+            if (prop === property) {
+                value = object[prop];
+                return true;
+            }
+            if (object[prop] && typeof object[prop] === 'object') {
+                value = UtilityFunctions.findValue(object[prop], property);
+                return false;
+            }
+        });
+        return value;
+    }
+
+    /**
+     * Returns the last entry in an array
+     *
+     * @param {Array} array array to check
+     *
+     * @returns {Object} last entry
+     */
+    static last(array) {
+        const last = 1;
+        return array[array.length - last];
+    }
+
+    /**
+     * Returns the last entry in an array
+     *
+     * @param {Array} array array to check
+     *
+     * @returns {Object} last entry
+     */
+    static first(array) {
+        return array[0];
+    }
+
+    /**
+     * Parse a JSON string.
+     *
+     * @param {String} string JSON string
+     *
+     * @returns {Object} obj javascript object
+     */
+    static parse(string) {
+        let obj = null;
+        try {
+            obj = JSON.parse(string);
+        } catch (ex) {
+            gs.warn(`[UtilityFunctions][parse] Not a valide JSON string ==> ${ ex.message}`);
+        }
+
+        return obj;
+    }
+}
+]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin_adeshpande</sys_created_by>
+        <sys_created_on>2024-03-18 11:11:33</sys_created_on>
+        <sys_id>a7785ac97d8586905dcfc8911252ad51</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>UtilityFunctions</sys_name>
+        <sys_package display_value="Dynamic Reference Qualifier SM.now WORK IN PROGRESS" source="x_dtitg_dyn_ref">d49c834144308a185dcf3c103cd402e7</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Dynamic Reference Qualifier SM.now WORK IN PROGRESS">d49c834144308a185dcf3c103cd402e7</sys_scope>
+        <sys_update_name>sys_script_include_a7785ac97d8586905dcfc8911252ad51</sys_update_name>
+        <sys_updated_by>admin_adeshpande</sys_updated_by>
+        <sys_updated_on>2024-03-18 11:54:48</sys_updated_on>
+    </sys_script_include>
+</record_update>

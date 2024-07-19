@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_atf_step">
+    <sys_atf_step action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <copied_from/>
+        <description>Run Server Side Validation Script</description>
+        <display_name>Run Server Side Script</display_name>
+        <inputs/>
+        <mugshots_cache_json/>
+        <notes/>
+        <order>1</order>
+        <step_config display_value="Run Server Side Script">41de4a935332120028bc29cac2dc349a</step_config>
+        <sys_class_name>sys_atf_step</sys_class_name>
+        <sys_created_by>admin_adeshpande</sys_created_by>
+        <sys_created_on>2024-03-27 05:00:50</sys_created_on>
+        <sys_id>4d699f3b8c0d4e105dcf10bd1c643b29</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>Run Server Side Script</sys_name>
+        <sys_package display_value="Dynamic Reference Qualifier SM.now WORK IN PROGRESS" source="x_dtitg_dyn_ref">d49c834144308a185dcf3c103cd402e7</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Dynamic Reference Qualifier SM.now WORK IN PROGRESS">d49c834144308a185dcf3c103cd402e7</sys_scope>
+        <sys_update_name>sys_atf_step_4d699f3b8c0d4e105dcf10bd1c643b29</sys_update_name>
+        <sys_updated_by>admin_adeshpande</sys_updated_by>
+        <sys_updated_on>2024-06-21 10:16:15</sys_updated_on>
+        <table/>
+        <test display_value="Dynamic Reference Qualifier SM.now - QueryBuilder - findRoles()">dd49573b8c0d4e105dcf10bd1c643bc8</test>
+        <timeout/>
+        <warning_message/>
+    </sys_atf_step>
+    <sys_variable_value action="delete_multiple" query="document_key=4d699f3b8c0d4e105dcf10bd1c643b29"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_atf_step</document>
+        <document_key>4d699f3b8c0d4e105dcf10bd1c643b29</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin_adeshpande</sys_created_by>
+        <sys_created_on>2024-03-27 05:00:51</sys_created_on>
+        <sys_id>d62a1f3b8c0d4e105dcf10bd1c643b4c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin_adeshpande</sys_updated_by>
+        <sys_updated_on>2024-03-27 05:00:51</sys_updated_on>
+        <value>3.1</value>
+        <variable display_value="Jasmine version">42f2564b73031300440211d8faf6a777</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_atf_step</document>
+        <document_key>4d699f3b8c0d4e105dcf10bd1c643b29</document_key>
+        <order>200</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin_adeshpande</sys_created_by>
+        <sys_created_on>2024-03-27 05:00:51</sys_created_on>
+        <sys_id>de2a1f3b8c0d4e105dcf10bd1c643b4c</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_updated_by>admin_adeshpande</sys_updated_by>
+        <sys_updated_on>2024-06-21 10:16:15</sys_updated_on>
+        <value>(function(outputs, steps, params, stepResult, assertEqual) {&#13;
+    &#13;
+	const user = '3319573b8c0d4e105dcf10bd1c643be0';&#13;
+	const table = 'incident';&#13;
+&#13;
+	const expected = 'user=3319573b8c0d4e105dcf10bd1c643be0';&#13;
+&#13;
+	let result = x_dtitg_dyn_ref.QueryBuilder.findRoles(user);&#13;
+&#13;
+	let assertion = {&#13;
+		name: 'Assert QueryBuilder findRoles',&#13;
+		shouldbe: expected,&#13;
+		value: result&#13;
+	}&#13;
+&#13;
+	assertEqual(assertion);&#13;
+&#13;
+&#13;
+})(outputs, steps, params, stepResult, assertEqual);&#13;
+// uncomment the next line to execute this script as a jasmine test&#13;
+//jasmine.getEnv().execute();&#13;
+</value>
+        <variable display_value="Test script">989d9e235324220002c6435723dc3484</variable>
+    </sys_variable_value>
+</record_update>

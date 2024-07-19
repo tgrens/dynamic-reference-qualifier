@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_atf_test_suite_test">
+    <sys_atf_test_suite_test action="INSERT_OR_UPDATE">
+        <abort_on_failure>false</abort_on_failure>
+        <order/>
+        <sys_class_name>sys_atf_test_suite_test</sys_class_name>
+        <sys_created_by>admin_adeshpande</sys_created_by>
+        <sys_created_on>2024-06-10 10:57:18</sys_created_on>
+        <sys_id>1eeafa841d768e105dcf5cb2086a13da</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>b60ceec01df28e105dcf5cb2086a139d</sys_name>
+        <sys_package display_value="Dynamic Reference Qualifier SM.now WORK IN PROGRESS" source="x_dtitg_dyn_ref">d49c834144308a185dcf3c103cd402e7</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Dynamic Reference Qualifier SM.now WORK IN PROGRESS">d49c834144308a185dcf3c103cd402e7</sys_scope>
+        <sys_update_name>sys_atf_test_suite_test_1eeafa841d768e105dcf5cb2086a13da</sys_update_name>
+        <sys_updated_by>admin_adeshpande</sys_updated_by>
+        <sys_updated_on>2024-06-10 10:57:18</sys_updated_on>
+        <test display_value="Dynamic Reference Qualifier SM.now - DynamicReferenceQualifier - process()">b60ceec01df28e105dcf5cb2086a139d</test>
+        <test_suite display_value="Dynamic Reference Qualifier SM.now - DynamicReferenceQualifier">2b681bf78c0d4e105dcf10bd1c643b89</test_suite>
+    </sys_atf_test_suite_test>
+</record_update>

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_dtitg_dyn_ref.ConfigurableRefQualifier</api_name>
+        <caller_access/>
+        <client_callable>false</client_callable>
+        <description>ConfigurableRefQualifier implementation</description>
+        <name>ConfigurableRefQualifier</name>
+        <script><![CDATA[
+/**
+ * @class ConfigurableRefQualifier
+ * @description ConfigurableRefQualifier implementation
+ * @since 10/07/2024
+ * @since 10/07/2024
+ * @version 1.0.0
+ * @author Thomas Grensemann E-Mail: <thomas.grensemann@t-systems.com>
+ *
+ */
+class ConfigurableRefQualifier extends ReferenceQualifier {
+
+    /**
+     * @description Returns the reference qualifier string
+     *
+     * @param {String} field name of the field
+     * @param {Object} current GlideRecord object of current record
+     * @param {String} user SysID of current user
+     * @param {String} property properytObj property
+     *
+     * @returns {String} query to be used as a reference qualifier
+     */
+    process(field, current, user, _property) {
+        const EMTPY = 0;
+        let result = '';
+        let property = _property || Constants.DEFAULT_PROPERTY
+        const table = current.getValue('sys_class_name');
+        const propertyName = this.buildProperty(field, table);
+        gs.debug(`[ConfigurableRefQualifier][process] property ${ propertyName}`);
+
+        // eslint-disable-next-line camelcase
+        let propertyObj = new x_dtitg_now_proper.ConfigReader().getPropertyByPermissions(propertyName, user);
+        // eslint-disable-next-line camelcase
+        if(Object.keys(propertyObj).length !== EMTPY) {
+            const scriptedRefQualifier = Boolean(propertyObj.use_source_script);
+            // If use script is checked, execute script else check condition field
+            if(scriptedRefQualifier) {
+                result = this.execute(propertyObj, current, true);
+            } else {
+                result = propertyObj[property].toString();
+            }
+        }
+
+        return result;
+    }
+}]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin_thomas</sys_created_by>
+        <sys_created_on>2024-07-10 11:52:20</sys_created_on>
+        <sys_id>544761b92ddf06105dcf91c2a78bf187</sys_id>
+        <sys_mod_count>13</sys_mod_count>
+        <sys_name>ConfigurableRefQualifier</sys_name>
+        <sys_package display_value="Dynamic Reference Qualifier SM.now WORK IN PROGRESS" source="x_dtitg_dyn_ref">d49c834144308a185dcf3c103cd402e7</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Dynamic Reference Qualifier SM.now WORK IN PROGRESS">d49c834144308a185dcf3c103cd402e7</sys_scope>
+        <sys_update_name>sys_script_include_544761b92ddf06105dcf91c2a78bf187</sys_update_name>
+        <sys_updated_by>admin_thomas</sys_updated_by>
+        <sys_updated_on>2024-07-12 11:38:24</sys_updated_on>
+    </sys_script_include>
+</record_update>

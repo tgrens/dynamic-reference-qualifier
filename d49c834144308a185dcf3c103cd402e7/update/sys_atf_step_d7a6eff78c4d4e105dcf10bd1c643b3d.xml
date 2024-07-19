@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_atf_step">
+    <sys_atf_step action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <copied_from/>
+        <description>Run Server Side Validation Script</description>
+        <display_name>Run Server Side Script</display_name>
+        <inputs/>
+        <mugshots_cache_json/>
+        <notes/>
+        <order>1</order>
+        <step_config display_value="Run Server Side Script">41de4a935332120028bc29cac2dc349a</step_config>
+        <sys_class_name>sys_atf_step</sys_class_name>
+        <sys_created_by>admin_adeshpande</sys_created_by>
+        <sys_created_on>2024-03-27 06:00:23</sys_created_on>
+        <sys_id>d7a6eff78c4d4e105dcf10bd1c643b3d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Run Server Side Script</sys_name>
+        <sys_package display_value="Dynamic Reference Qualifier SM.now WORK IN PROGRESS" source="x_dtitg_dyn_ref">d49c834144308a185dcf3c103cd402e7</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Dynamic Reference Qualifier SM.now WORK IN PROGRESS">d49c834144308a185dcf3c103cd402e7</sys_scope>
+        <sys_update_name>sys_atf_step_d7a6eff78c4d4e105dcf10bd1c643b3d</sys_update_name>
+        <sys_updated_by>admin_adeshpande</sys_updated_by>
+        <sys_updated_on>2024-03-27 06:00:23</sys_updated_on>
+        <table/>
+        <test display_value="Dynamic Reference Qualifier SM.now - ReferenceQualifier - execute()">2a66233b8c4d4e105dcf10bd1c643b2d</test>
+        <timeout/>
+        <warning_message/>
+    </sys_atf_step>
+    <sys_variable_value action="delete_multiple" query="document_key=d7a6eff78c4d4e105dcf10bd1c643b3d"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_atf_step</document>
+        <document_key>d7a6eff78c4d4e105dcf10bd1c643b3d</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin_adeshpande</sys_created_by>
+        <sys_created_on>2024-03-27 06:00:23</sys_created_on>
+        <sys_id>16c767bb8c4d4e105dcf10bd1c643b38</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin_adeshpande</sys_updated_by>
+        <sys_updated_on>2024-03-27 06:00:23</sys_updated_on>
+        <value>3.1</value>
+        <variable display_value="Jasmine version">42f2564b73031300440211d8faf6a777</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_atf_step</document>
+        <document_key>d7a6eff78c4d4e105dcf10bd1c643b3d</document_key>
+        <order>200</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin_adeshpande</sys_created_by>
+        <sys_created_on>2024-03-27 06:00:23</sys_created_on>
+        <sys_id>5ec767bb8c4d4e105dcf10bd1c643b38</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin_adeshpande</sys_updated_by>
+        <sys_updated_on>2024-03-27 06:00:23</sys_updated_on>
+        <value>(function(outputs, steps, params, stepResult, assertEqual) {&#13;
+    &#13;
+	const query = 'name=TEST_REF_QUALIFIER.incident^type=1000^active=true^default=true';&#13;
+&#13;
+	let property = new GlideRecord('x_dtitg_now_proper_now_properties');&#13;
+	property.addEncodedQuery(query);&#13;
+	property.query();&#13;
+	&#13;
+	const expected = 'active=true^EQ';&#13;
+&#13;
+	if(property.next()) {&#13;
+		let result = new x_dtitg_dyn_ref.ReferenceQualifier().execute(property, null, false);&#13;
+&#13;
+		let assertion = {&#13;
+			name: 'Assert ReferenceQualifier execute',&#13;
+			shouldbe: expected,&#13;
+			value: result&#13;
+		}&#13;
+&#13;
+		assertEqual(assertion);&#13;
+&#13;
+	} else {&#13;
+		stepResult.setOutputMessage('Test property not found');&#13;
+		return false;&#13;
+	}&#13;
+&#13;
+})(outputs, steps, params, stepResult, assertEqual);&#13;
+// uncomment the next line to execute this script as a jasmine test&#13;
+//jasmine.getEnv().execute();&#13;
+</value>
+        <variable display_value="Test script">989d9e235324220002c6435723dc3484</variable>
+    </sys_variable_value>
+</record_update>
